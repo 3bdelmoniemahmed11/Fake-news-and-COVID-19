@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Covid-19 News Detection</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/style.css')}}">
+  <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/materialize.css')}}">
+</head>
+
+<body>
+  <nav class="light-blue lighten-1" role="navigation">
+    <form action="/home" method="POST" class="col s12">
+      <div class="nav-wrapper container"><a href="{{ url_for('home') }}" id="logo-container" href="#" class="brand-logo">Home</a>
+      
+
+        <ul id="nav-mobile" class="sidenav">
+          <li><a href="#">Navbar Link</a></li>
+        </ul>
+        <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      </div>
+    </form>
+  </nav>
+
+
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <br><br>
+      <h1  data-text="Covid-19 News Detection" >Covid-19 News Detection</h1>
+      <div class="row center">
+        <h5 class="header col s12 light">Advanced Search
+        <br>
+        </h5>
+      </div>
+
+        <div class="row">
+    <form action='/advance_search' method="POST" class="col s12">
+      <div class="row">
+        
+            <label for="first_name"><b>Keyword</b></label>
+            <br>
+            
+          <input   id="kword" name='kword'type="text" class="validate" placeholder="type & hit Enter">
+        
+        
+      </div>
+
+      <div class="row center">
+
+          <button type="submit" class="btn-large waves-effect waves-light orange">Search</button>
+      </div>
+      <div class="row center">
+        {{key|safe}}<br>
+      </div>
+     
+
+      
+    </form>
+    
+      </div>
+
+      
+        <br>
+
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="section">
+
+      <!--   Icon Section   -->
+      <div class="row">
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center light-blue-text"><i class="material-icons">flash_on</i></h2>
+            <h5 class="center">Covid-19 Facts</h5>
+
+            <p class="light">Most people infected with the COVID-19 virus will experience mild to moderate respiratory illness and recover without requiring special treatment.  Older people, and those with underlying medical problems like cardiovascular disease, diabetes, chronic respiratory disease, and cancer are more likely to develop serious illness.</p>
+          </div>
+
+              
+        </div>
+
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center light-blue-text"><i class="material-icons">group</i></h2>
+            <h5 class="center">Prevention</h5>
+
+            <ul class="light">
+              <li>- Wash your hands regularly with soap and water, or clean them with alcohol-based hand rub.</li>
+              <li>- Maintain at least 1 metre distance between you and people coughing or sneezing.</li>
+              <li>- Avoid touching your face.</li>
+              <li>- Cover your mouth and nose when coughing or sneezing.</li>
+              <li>- Stay home if you feel unwell.</li>
+              <li>- Refrain from smoking and other activities that weaken the lungs.</li>
+              <li>- Practice physical distancing by avoiding unnecessary travel and staying away from large groups of people.</li>
+            </ul>
+          </div>
+            
+        </div>
+
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center light-blue-text"><i class="material-icons">settings</i></h2>
+            <h5 class="center">Symptoms</h5>
+
+            <dl class="light">
+              <dt>Most Common Symptoms</dt>
+              <dd>- Fever.</dd>
+              <dd>- dry cough.</dd>
+              <dd>- tiredness.</dd>
+            </dl>
+
+            <dl class="light">
+              <dt>Serious Symptoms</dt>
+              <dd>- difficulty breathing or shortness of breath.</dd>
+              <dd>- chest pain or pressure.</dd>
+              <dd>- loss of speech or movement.</dd>
+            </dl>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <br><br>
+  </div>
+  </div>
+
+  <footer class="page-footer orange">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Team Bio</h5>
+          <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated.</p>
+
+
+        </div>
+        
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      <a class="orange-text text-lighten-3" ></a>
+      </div>
+    </div>
+  </footer>
+
+
+  
+
+  </body>
+</html>
+
